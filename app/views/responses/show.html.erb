@@ -1,0 +1,11 @@
+<h2>Question: <%= @question.question %></h2>
+<h2>By: <%= @question.author %></h2>
+<h3>Response: <%= @response.answer %></h3>
+<h3>Author: <%= @response.author %></h3>
+
+<p><%= link_to "Edit response", edit_question_response_path(@question, @response) %></p>
+<p><%= link_to "Delete response", question_response_path(@question, @response),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to question", question_path(@question) %></p>
